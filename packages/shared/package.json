@@ -1,0 +1,9 @@
+{
+  "name": "@probe/shared",
+  "version": "1.0.0",
+  "description": "Shared utilities — depends on zod for schema validation",
+  "main": "index.js",
+  "dependencies": {
+    "zod": "^3.22.4"
+  }
+}
