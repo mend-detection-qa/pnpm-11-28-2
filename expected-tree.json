@@ -1,0 +1,242 @@
+{
+  "generated_at": "2026-09-28T18:07:18Z",
+  "packages": {
+    "@fastify/ajv-compiler": {
+      "dependencies": [
+        "fast-uri",
+        "json-schema-ref-resolver",
+        "semver"
+      ],
+      "group": "main",
+      "source": "registry",
+      "version": "3.6.0"
+    },
+    "@fastify/error": {
+      "dependencies": [],
+      "group": "main",
+      "source": "registry",
+      "version": "3.4.1"
+    },
+    "@fastify/fast-json-stringify-compiler": {
+      "dependencies": [
+        "fast-json-stringify"
+      ],
+      "group": "main",
+      "source": "registry",
+      "version": "4.3.0"
+    },
+    "@probe/api": {
+      "dependencies": [
+        "@probe/shared",
+        "fastify"
+      ],
+      "group": "main",
+      "source": "local",
+      "source_detail": {
+        "workspace": "packages/api"
+      },
+      "version": "1.0.0"
+    },
+    "@probe/cli": {
+      "dependencies": [
+        "@probe/shared",
+        "commander",
+        "zod"
+      ],
+      "group": "main",
+      "source": "local",
+      "source_detail": {
+        "workspace": "packages/cli"
+      },
+      "version": "1.0.0"
+    },
+    "@probe/shared": {
+      "dependencies": [
+        "zod"
+      ],
+      "group": "main",
+      "source": "local",
+      "source_detail": {
+        "workspace": "packages/shared"
+      },
+      "version": "1.0.0"
+    },
+    "abstract-logging": {
+      "dependencies": [],
+      "group": "main",
+      "source": "registry",
+      "version": "2.0.1"
+    },
+    "avvio": {
+      "dependencies": [
+        "semver"
+      ],
+      "group": "main",
+      "source": "registry",
+      "version": "8.3.0"
+    },
+    "commander": {
+      "dependencies": [],
+      "group": "main",
+      "source": "registry",
+      "version": "12.1.0"
+    },
+    "fast-content-type-parse": {
+      "dependencies": [],
+      "group": "main",
+      "source": "registry",
+      "version": "1.1.0"
+    },
+    "fast-json-stringify": {
+      "dependencies": [
+        "@fastify/ajv-compiler",
+        "fast-uri",
+        "json-schema-ref-resolver",
+        "semver"
+      ],
+      "group": "main",
+      "source": "registry",
+      "version": "5.16.1"
+    },
+    "fast-querystring": {
+      "dependencies": [],
+      "group": "main",
+      "source": "registry",
+      "version": "1.1.2"
+    },
+    "fast-uri": {
+      "dependencies": [],
+      "group": "main",
+      "source": "registry",
+      "version": "3.0.6"
+    },
+    "fastify": {
+      "dependencies": [
+        "@fastify/ajv-compiler",
+        "@fastify/error",
+        "@fastify/fast-json-stringify-compiler",
+        "abstract-logging",
+        "avvio",
+        "fast-content-type-parse",
+        "fast-json-stringify",
+        "find-my-way",
+        "light-my-request",
+        "process-warning",
+        "quick-format-unescaped",
+        "real-require",
+        "ret",
+        "safe-regex2",
+        "secure-json-parse",
+        "semver",
+        "set-cookie-parser"
+      ],
+      "group": "main",
+      "source": "registry",
+      "version": "4.28.1"
+    },
+    "find-my-way": {
+      "dependencies": [
+        "fast-querystring",
+        "fast-uri",
+        "ret",
+        "safe-regex2",
+        "semver"
+      ],
+      "group": "main",
+      "source": "registry",
+      "version": "8.2.2"
+    },
+    "json-schema-ref-resolver": {
+      "dependencies": [
+        "fast-uri"
+      ],
+      "group": "main",
+      "source": "registry",
+      "version": "1.0.1"
+    },
+    "light-my-request": {
+      "dependencies": [
+        "fast-querystring",
+        "fast-uri",
+        "set-cookie-parser"
+      ],
+      "group": "main",
+      "source": "registry",
+      "version": "5.13.0"
+    },
+    "process-warning": {
+      "dependencies": [],
+      "group": "main",
+      "source": "registry",
+      "version": "4.0.1"
+    },
+    "quick-format-unescaped": {
+      "dependencies": [],
+      "group": "main",
+      "source": "registry",
+      "version": "4.0.4"
+    },
+    "real-require": {
+      "dependencies": [],
+      "group": "main",
+      "source": "registry",
+      "version": "0.2.0"
+    },
+    "ret": {
+      "dependencies": [],
+      "group": "main",
+      "source": "registry",
+      "version": "0.4.3"
+    },
+    "safe-regex2": {
+      "dependencies": [
+        "ret"
+      ],
+      "group": "main",
+      "source": "registry",
+      "version": "3.1.0"
+    },
+    "secure-json-parse": {
+      "dependencies": [],
+      "group": "main",
+      "source": "registry",
+      "version": "2.7.0"
+    },
+    "semver": {
+      "dependencies": [],
+      "group": "main",
+      "source": "registry",
+      "version": "7.6.3"
+    },
+    "set-cookie-parser": {
+      "dependencies": [],
+      "group": "main",
+      "source": "registry",
+      "version": "2.7.1"
+    },
+    "zod": {
+      "dependencies": [],
+      "group": "main",
+      "source": "registry",
+      "version": "3.22.4"
+    }
+  },
+  "pm": "pnpm",
+  "pm_version_tested": "11",
+  "pm_version_under_test": "11.28.2",
+  "root": {
+    "dependencies": [
+      "@probe/shared",
+      "@probe/api",
+      "@probe/cli"
+    ],
+    "name": "workspace-filtered-install-v11",
+    "version": "0.0.0"
+  },
+  "schema_version": "1.2",
+  "source_file": "pnpm-lock.yaml",
+  "warnings": [
+    "Workspace probe: root importer declares no direct dependencies. Workspace packages (@probe/shared, @probe/api, @probe/cli) appear in root.dependencies as workspace members, not as registry deps. Cross-workspace deps resolve via link: in the lockfile importers section.",
+    "Fastify transitive closure is a representative subset of the real pnpm install output. A live pnpm install against pnpm 11.28.2 may produce additional transitive entries not present in this hand-authored probe."
+  ]
+}
