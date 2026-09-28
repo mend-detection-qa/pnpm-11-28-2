@@ -1,0 +1,11 @@
+{
+  "name": "@probe/cli",
+  "version": "1.0.0",
+  "description": "CLI tool — workspace dep on @probe/shared, direct dep on zod (diamond) and commander",
+  "main": "index.js",
+  "dependencies": {
+    "@probe/shared": "workspace:*",
+    "commander": "^12.1.0",
+    "zod": "^3.22.4"
+  }
+}
