@@ -1,0 +1,10 @@
+{
+  "name": "@probe/api",
+  "version": "1.0.0",
+  "description": "API server — workspace dep on @probe/shared, external dep on fastify",
+  "main": "index.js",
+  "dependencies": {
+    "@probe/shared": "workspace:*",
+    "fastify": "^4.28.1"
+  }
+}
