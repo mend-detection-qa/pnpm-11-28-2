@@ -1,6 +1,6 @@
 {
   "description": "Autotest configuration file for dependency tree detection validation",
-  "version": 1.12,
+  "version": 1.8,
   "base_config": {
     "validate_scan_output": true,
     "_comment_validate_scan_output": "Whether to validate the scan output/exit code. Options: true | false. Default: true",
@@ -36,36 +36,36 @@
       "_comment_expected_dependencies_number": "Optional. Expected number of dependencies with comparison operator. Operators: gt (>), gte (>=), lt (<), lte (<=), eq (==). If not provided, this check will not be performed.",
       "direct_dependencies_names_list": {
         "eq": [
-          "@probe/api",
-          "@probe/cli",
-          "@probe/shared"
+          "@probe/api-1.0.0.tgz",
+          "@probe/cli-1.0.0.tgz",
+          "@probe/shared-1.0.0.tgz"
         ]
       },
       "transitive_dependencies_names_list": {
         "contains": [
-          "@fastify/ajv-compiler",
-          "@fastify/error",
-          "@fastify/fast-json-stringify-compiler",
-          "abstract-logging",
-          "avvio",
-          "commander",
-          "fast-content-type-parse",
-          "fast-json-stringify",
-          "fast-querystring",
-          "fast-uri",
-          "fastify",
-          "find-my-way",
-          "json-schema-ref-resolver",
-          "light-my-request",
-          "process-warning",
-          "quick-format-unescaped",
-          "real-require",
-          "ret",
-          "safe-regex2",
-          "secure-json-parse",
-          "semver",
-          "set-cookie-parser",
-          "zod"
+          "@fastify/ajv-compiler-3.6.0.tgz",
+          "@fastify/error-3.4.1.tgz",
+          "@fastify/fast-json-stringify-compiler-4.3.0.tgz",
+          "abstract-logging-2.0.1.tgz",
+          "avvio-8.3.0.tgz",
+          "commander-12.1.0.tgz",
+          "fast-content-type-parse-1.1.0.tgz",
+          "fast-json-stringify-5.16.1.tgz",
+          "fast-querystring-1.1.2.tgz",
+          "fast-uri-3.0.6.tgz",
+          "fastify-4.28.1.tgz",
+          "find-my-way-8.2.2.tgz",
+          "json-schema-ref-resolver-1.0.1.tgz",
+          "light-my-request-5.13.0.tgz",
+          "process-warning-4.0.1.tgz",
+          "quick-format-unescaped-4.0.4.tgz",
+          "real-require-0.2.0.tgz",
+          "ret-0.4.3.tgz",
+          "safe-regex2-3.1.0.tgz",
+          "secure-json-parse-2.7.0.tgz",
+          "semver-7.6.3.tgz",
+          "set-cookie-parser-2.7.1.tgz",
+          "zod-3.22.4.tgz"
         ]
       },
       "_comment_dependencies_names_list": "Optional. Check specific libraries in direct dependencies. Operators: eq (==), contains (all items from expected list in actual), in(all items from actual list in expected), nin(actual list does not contain provided libs). If not provided, this check will not be performed.",
