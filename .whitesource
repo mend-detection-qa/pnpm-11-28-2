@@ -3,7 +3,7 @@
     "configMode": "AUTO",
     "versioning": {
       "pnpm": "11.28.2",
-      "node": "20.11.1"
+      "node": "22.14.0"
     }
   }
 }

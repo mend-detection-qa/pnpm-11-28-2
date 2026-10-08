@@ -156,3 +156,15 @@ Key changes:
   at/near filesystem root
 - Filtered install (`--filter`) + dependency verification
   logic changes
+
+## Lockfile fix (2026-10-08)
+
+A strict `pnpm install --frozen-lockfile` sweep with the pinned pnpm 11.28.2 showed the lockfile was not
+real pnpm output (the scan passed only because Mend reads the lockfile without installing):
+`ERR_PNPM_TARBALL_INTEGRITY` on real-require, ret, find-my-way and others (fabricated hashes), and the
+tree was truncated — 23 packages, where a real resolution of the same fastify 4.28.1 workspace has 51
+(pino, proxy-addr, toad-cache, … were missing). Regenerated with pnpm 11.28.2 keeping every declared
+version (fastify 4.28.1, commander 12.1.0, zod 3.22.4); `--frozen-lockfile` install succeeds.
+
+Also: `.whitesource` node pin 20.11.1 → 22.14.0 — pnpm 11.28 requires node ≥ 22.13, so an install with
+the old pin could not run.
