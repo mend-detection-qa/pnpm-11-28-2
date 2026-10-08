@@ -8,7 +8,7 @@
       "_security_scan_report_conclusion": "success",
       "_comment_security_scan_report_conclusion": "Optional. Expected scan report conclusion. Options: 'success' | 'failure'. This validates the security scan result status. If not provided, this check will not be performed.",
       "total_libs_scanned": {
-        "gte": 20
+        "eq": 54
       },
       "_comment_total_libs_scanned": "Optional. Expected number of libraries scanned with comparison operator. Validates that the scan processed libraries. If not provided, this check will not be performed.",
       "expected_messages": [],
@@ -25,13 +25,13 @@
       "check_update_request_sca_results": true,
       "_comment_check_update_request_sca_results": "Whether to validate extraProperties.scaResults from the update request. Parses scaResults as JSON and asserts: (1) totalFail is empty {}, (2) no results entry has level 'ERROR'. Options: true | false. Default: false",
       "expected_total_dependencies_number": {
-        "gte": 23
+        "eq": 54
       },
       "expected_direct_dependencies_number": {
         "eq": 3
       },
       "expected_transitive_dependencies_number": {
-        "gte": 20
+        "eq": 51
       },
       "_comment_expected_dependencies_number": "Optional. Expected number of dependencies with comparison operator. Operators: gt (>), gte (>=), lt (<), lte (<=), eq (==). If not provided, this check will not be performed.",
       "direct_dependencies_names_list": {
@@ -42,23 +42,57 @@
         ]
       },
       "transitive_dependencies_names_list": {
-        "contains": [
+        "eq": [
           "@fastify/ajv-compiler-3.6.0.tgz",
           "@fastify/error-3.4.1.tgz",
           "@fastify/fast-json-stringify-compiler-4.3.0.tgz",
+          "@fastify/merge-json-schemas-0.1.1.tgz",
+          "@pinojs/redact-0.4.0.tgz",
           "abstract-logging-2.0.1.tgz",
+          "ajv-8.20.0.tgz",
+          "ajv-formats-2.1.1.tgz",
+          "ajv-formats-3.0.1.tgz",
+          "atomic-sleep-1.0.0.tgz",
+          "avvio-8.4.0.tgz",
           "commander-12.1.0.tgz",
+          "cookie-0.7.2.tgz",
           "fast-content-type-parse-1.1.0.tgz",
+          "fast-decode-uri-component-1.0.1.tgz",
+          "fast-deep-equal-3.1.3.tgz",
           "fast-json-stringify-5.16.1.tgz",
           "fast-querystring-1.1.2.tgz",
+          "fast-uri-2.4.7.tgz",
+          "fast-uri-3.1.8.tgz",
           "fastify-4.28.1.tgz",
+          "fastq-1.20.3.tgz",
           "find-my-way-8.2.2.tgz",
+          "forwarded-0.2.0.tgz",
+          "ipaddr.js-1.9.1.tgz",
           "json-schema-ref-resolver-1.0.1.tgz",
+          "json-schema-traverse-1.0.0.tgz",
+          "light-my-request-5.14.0.tgz",
+          "on-exit-leak-free-2.1.2.tgz",
+          "pino-9.14.0.tgz",
+          "pino-abstract-transport-2.0.0.tgz",
+          "pino-std-serializers-7.1.0.tgz",
+          "process-warning-3.0.0.tgz",
+          "process-warning-5.1.0.tgz",
+          "proxy-addr-2.0.8.tgz",
           "quick-format-unescaped-4.0.4.tgz",
           "real-require-0.2.0.tgz",
+          "require-from-string-2.0.2.tgz",
           "ret-0.4.3.tgz",
+          "reusify-1.1.0.tgz",
+          "rfdc-1.4.1.tgz",
           "safe-regex2-3.1.0.tgz",
+          "safe-stable-stringify-2.5.0.tgz",
           "secure-json-parse-2.7.0.tgz",
+          "semver-7.8.5.tgz",
+          "set-cookie-parser-2.7.2.tgz",
+          "sonic-boom-4.2.1.tgz",
+          "split2-4.2.0.tgz",
+          "thread-stream-3.2.0.tgz",
+          "toad-cache-3.7.4.tgz",
           "zod-3.22.4.tgz"
         ]
       },
@@ -74,7 +108,28 @@
       "expected_plugin_version": "",
       "_comment_agent_versions": "Optional. Expected agent and plugin versions. If not provided, this check will not be performed.",
       "validate_mend_tags": false,
-      "_comment_validate_mend_tags": "Whether to validate project tags from Mend Platform BFF API against update request extraProperties. Options: true | false. Default: false. When true, calls the BFF projects/summaries endpoint and cross-validates sourceUrl, repoId, CTX, commitId, repoFullName tags against extraProperties (owner, commitId, branchName, repository)."
+      "_comment_validate_mend_tags": "Whether to validate project tags from Mend Platform BFF API against update request extraProperties. Options: true | false. Default: false. When true, calls the BFF projects/summaries endpoint and cross-validates sourceUrl, repoId, CTX, commitId, repoFullName tags against extraProperties (owner, commitId, branchName, repository).",
+      "expected_dependency_pairs": [
+        {
+          "artifactId": "fastify-4.28.1.tgz",
+          "version": "4.28.1"
+        },
+        {
+          "artifactId": "commander-12.1.0.tgz",
+          "version": "12.1.0"
+        },
+        {
+          "artifactId": "zod-3.22.4.tgz",
+          "version": "3.22.4"
+        },
+        {
+          "artifactId": "pino-9.14.0.tgz",
+          "version": "9.14.0"
+        }
+      ],
+      "expected_partial_scan_error": {
+        "operator": "absent"
+      }
     },
     "validate_vulnerabilities_table": false,
     "_comment_validate_vulnerabilities_table": "Whether to validate the vulnerabilities table. Options: true | false. Default: true",
